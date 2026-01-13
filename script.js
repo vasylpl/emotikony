@@ -1,20 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const emojis = ['😀', '😂', '😍', '🤔', '😎', '😢', '🥳', '🤯', '😡', '👍'];
-  const emojiContainer = document.getElementById('emoji-container');
-  const emojiInput = document.getElementById('emoji-input');
-  const clearButton = document.getElementById('clear-button');
+function pridat(src) {
+  var obrazek = "<img src='" + src + "' width='30'>";
+  
+  // Poslední symbol [cite: 8]
+  document.getElementById("posledni").innerHTML = obrazek;
+  
+  // Zápis do historie [cite: 9]
+  document.getElementById("historie").innerHTML += obrazek;
+}
 
-  emojis.forEach(emoji => {
-    const emojiSpan = document.createElement('span');
-    emojiSpan.className = 'emoji';
-    emojiSpan.textContent = emoji;
-    emojiSpan.addEventListener('click', () => {
-      emojiInput.textContent += emoji;
-    });
-    emojiContainer.appendChild(emojiSpan);
-  });
+function pridatText() {
+  var text = document.getElementById("vstup").value;
+  
+  // Přidá se vždy pouze do historie [cite: 10]
+  document.getElementById("historie").innerHTML += text + " ";
+  document.getElementById("vstup").value = "";
+}
 
-  clearButton.addEventListener('click', () => {
-    emojiInput.textContent = '';
-  });
-});
+function smazat() {
+  // Smaže oba textové odstavce [cite: 11]
+  document.getElementById("posledni").innerHTML = "";
+  document.getElementById("historie").innerHTML = "";
+}

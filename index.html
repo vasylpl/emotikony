@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-  <title>Emoji Selector</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <title>polazhynets</title> </head>
 <body>
 
-  <h1>Click an emoji to add it</h1>
+    <button onclick="pridat('vesely.png')"><img src="vesely.png" alt="vesely" width="30"></button>
+    <button onclick="pridat('mracoun.png')"><img src="mracoun.png" alt="mracoun" width="30"></button>
+    <button onclick="pridat('usmevacek.png')"><img src="usmevacek.png" alt="usmevacek" width="30"></button>
+    <button onclick="pridat('nesvuj.png')"><img src="nesvuj.png" alt="nesvuj" width="30"></button>
+    <button onclick="pridat('udiveny.png')"><img src="udiveny.png" alt="udiveny" width="30"></button>
+    <button onclick="pridat('zhrouceny.png')"><img src="zhrouceny.png" alt="zhrouceny" width="30"></button>
 
-  <div id="emoji-container"></div>
+    <button onclick="smazat()">Smazat</button> <button onclick="pridatText()">Přidat vlastní text</button> <input type="text" id="vstup">
 
-  <div id="input-container">
-    <div id="emoji-input" contenteditable="true"></div>
-    <button id="clear-button">Clear</button>
-  </div>
-
-  <script src="script.js"></script>
-
+    <p id="posledni"></p> <p id="historie"></p> <script src="script.js"></script>
 </body>
 </html>
