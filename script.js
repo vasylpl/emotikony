@@ -1,23 +1,23 @@
 function pridat(src) {
   var obrazek = "<img src='" + src + "' width='30'>";
   
-  // Poslední symbol [cite: 8]
+  // Poslední symbol 
   document.getElementById("posledni").innerHTML = obrazek;
   
-  // Zápis do historie [cite: 9]
+  // Zápis do historie 
   document.getElementById("historie").innerHTML += obrazek;
 }
 
 function pridatText() {
   var text = document.getElementById("vstup").value;
   
-  // Přidá se vždy pouze do historie [cite: 10]
+  // Přidá se vždy pouze do historie 
   document.getElementById("historie").innerHTML += text + " ";
   document.getElementById("vstup").value = "";
 }
 
 function smazat() {
-  // Smaže oba textové odstavce [cite: 11]
+  // Smaže oba textové odstavce 
   document.getElementById("posledni").innerHTML = "";
   document.getElementById("historie").innerHTML = "";
 }
